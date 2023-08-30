@@ -26,14 +26,14 @@ export const GET = async (request, { params }) => {
 
 
 export const PATCH = async (request, { params }) => {
-    const { prompt, tag } = request.json();
+    const { prompt, tag } = await request.json();
 
     try {
 
         await connectToDatabase();
 
         const existingPrompt = await Prompt.findById(params.id);
-
+        
         if (!existingPrompt) return new Response("No Prompt found", { status: 404 })
 
         existingPrompt.prompt = prompt;
