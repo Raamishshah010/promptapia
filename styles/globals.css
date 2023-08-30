@@ -112,7 +112,7 @@
 }
 
 .glassmorphism {
-    @apply rounded-xl border border-gray-200 bg-white bg-opacity-20 filter drop-shadow-md backdrop-blur p-5;
+    @apply rounded-xl border border-gray-200 bg-white bg-opacity-20 filter drop-shadow-2xl backdrop-blur p-5;
 }
 
 .prompt_layout {
