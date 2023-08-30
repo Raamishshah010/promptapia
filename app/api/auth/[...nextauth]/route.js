@@ -27,7 +27,6 @@ const handler = NextAuth({
         async signIn({ profile }) {
             try {
 
-                console.log(profile);
 
                 await connectToDatabase();
 
@@ -35,7 +34,6 @@ const handler = NextAuth({
                     email: profile.email
                 })
 
-                console.log(existUser);
 
                 if (!existUser) {
 
