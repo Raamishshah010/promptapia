@@ -27,12 +27,14 @@ const handler = NextAuth({
         async signIn({ profile }) {
             try {
 
-
+                console.log(profile.email);
                 await connectToDatabase();
 
                 const existUser = await User.findOne({
                     email: profile.email
                 })
+
+                console.log(existUser);
 
 
                 if (!existUser) {
@@ -47,7 +49,7 @@ const handler = NextAuth({
                 return true;
 
             } catch (error) {
-                console.log(error);
+                console.log(error.message);
                 return false;
             }
         }
