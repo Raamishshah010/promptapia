@@ -31,7 +31,7 @@ const Form = ({
         max-2-2xl
         flex flex-col gap-7
         glassmorphism
-        
+        mb-12
         "
             >
 
@@ -64,7 +64,7 @@ const Form = ({
             text-base
             text-gray-700
             "
-                    >Tag <span> (#product, #product, #webdevelopment)</span></span>
+                    >Tag <span> (#product, #web, #webdevelopment)</span></span>
 
                     <input
                         value={post.tag}
@@ -90,6 +90,7 @@ const Form = ({
                     <button
                     type="submit"
                     disabled={submitting}
+                    className="px-5 bg-primary-orange rounded-full text-white py-1.5 text-sm"
                     >
 
                         {
