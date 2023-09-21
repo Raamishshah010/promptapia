@@ -48,13 +48,17 @@ const Feed = () => {
         <section className="
             feed
         ">
+            
             <input type="text"
                 placeholder="Search for tag or username"
                 value={searchText}
                 onChange={handleSearchChange}
                 required
-                className="search_input peer"
+                className="search_input flex-2 peer"
             />
+
+
+
             <PromptCardList
                 data={posts}
                 handleTagClick={() => { }}
